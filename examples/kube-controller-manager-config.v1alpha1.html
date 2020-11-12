@@ -1,0 +1,2089 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style type="text/css">
+td p {
+margin-bottom: 0
+}
+code {
+color: #802060;
+display: inline-block;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<H2 id="kubecontrollermanager.config.k8s.io/v1alpha1">Package: <span style="font-family: monospace">kubecontrollermanager.config.k8s.io/v1alpha1</span></H2>
+<p></p>
+<H3>Resource Types:</H3>
+<ul><li>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>
+</li></ul>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration
+</H3>
+<p><p>KubeControllerManagerConfiguration contains elements describing kube-controller manager.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code></br>string</td>
+<td><code>kubecontrollermanager.config.k8s.io/v1alpha1</code></td>
+</tr>
+<tr>
+<td><code>kind</code></br>string</td>
+<td><code>KubeControllerManagerConfiguration</code></td>
+</tr>
+<tr>
+<td><code>Generic</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.GenericControllerManagerConfiguration">
+<span style="font-family: monospace">GenericControllerManagerConfiguration</span>
+</a>
+</td>
+<td>
+<p>Generic holds configuration for a generic controller-manager</p>
+</td>
+</tr>
+<tr>
+<td><code>KubeCloudShared</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeCloudSharedConfiguration">
+<span style="font-family: monospace">KubeCloudSharedConfiguration</span>
+</a>
+</td>
+<td>
+<p>KubeCloudSharedConfiguration holds configuration for shared related features
+both in cloud controller manager and kube-controller manager.</p>
+</td>
+</tr>
+<tr>
+<td><code>AttachDetachController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.AttachDetachControllerConfiguration">
+<span style="font-family: monospace">AttachDetachControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>AttachDetachControllerConfiguration holds configuration for
+AttachDetachController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>CSRSigningController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningControllerConfiguration">
+<span style="font-family: monospace">CSRSigningControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>CSRSigningControllerConfiguration holds configuration for
+CSRSigningController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>DaemonSetController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.DaemonSetControllerConfiguration">
+<span style="font-family: monospace">DaemonSetControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>DaemonSetControllerConfiguration holds configuration for DaemonSetController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>DeploymentController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.DeploymentControllerConfiguration">
+<span style="font-family: monospace">DeploymentControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>DeploymentControllerConfiguration holds configuration for
+DeploymentController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>StatefulSetController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.StatefulSetControllerConfiguration">
+<span style="font-family: monospace">StatefulSetControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>StatefulSetControllerConfiguration holds configuration for
+StatefulSetController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>DeprecatedController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.DeprecatedControllerConfiguration">
+<span style="font-family: monospace">DeprecatedControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>DeprecatedControllerConfiguration holds configuration for some deprecated
+features.</p>
+</td>
+</tr>
+<tr>
+<td><code>EndpointController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.EndpointControllerConfiguration">
+<span style="font-family: monospace">EndpointControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>EndpointControllerConfiguration holds configuration for EndpointController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>EndpointSliceController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.EndpointSliceControllerConfiguration">
+<span style="font-family: monospace">EndpointSliceControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>EndpointSliceControllerConfiguration holds configuration for
+EndpointSliceController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>EndpointSliceMirroringController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.EndpointSliceMirroringControllerConfiguration">
+<span style="font-family: monospace">EndpointSliceMirroringControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>EndpointSliceMirroringControllerConfiguration holds configuration for
+EndpointSliceMirroringController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>GarbageCollectorController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.GarbageCollectorControllerConfiguration">
+<span style="font-family: monospace">GarbageCollectorControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>GarbageCollectorControllerConfiguration holds configuration for
+GarbageCollectorController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>HPAController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.HPAControllerConfiguration">
+<span style="font-family: monospace">HPAControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>HPAControllerConfiguration holds configuration for HPAController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>JobController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.JobControllerConfiguration">
+<span style="font-family: monospace">JobControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>JobControllerConfiguration holds configuration for JobController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>NamespaceController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.NamespaceControllerConfiguration">
+<span style="font-family: monospace">NamespaceControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>NamespaceControllerConfiguration holds configuration for NamespaceController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeIPAMController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.NodeIPAMControllerConfiguration">
+<span style="font-family: monospace">NodeIPAMControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>NodeIPAMControllerConfiguration holds configuration for NodeIPAMController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeLifecycleController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.NodeLifecycleControllerConfiguration">
+<span style="font-family: monospace">NodeLifecycleControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>NodeLifecycleControllerConfiguration holds configuration for
+NodeLifecycleController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>PersistentVolumeBinderController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.PersistentVolumeBinderControllerConfiguration">
+<span style="font-family: monospace">PersistentVolumeBinderControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>PersistentVolumeBinderControllerConfiguration holds configuration for
+PersistentVolumeBinderController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>PodGCController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.PodGCControllerConfiguration">
+<span style="font-family: monospace">PodGCControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>PodGCControllerConfiguration holds configuration for PodGCController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>ReplicaSetController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.ReplicaSetControllerConfiguration">
+<span style="font-family: monospace">ReplicaSetControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>ReplicaSetControllerConfiguration holds configuration for ReplicaSet related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>ReplicationController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.ReplicationControllerConfiguration">
+<span style="font-family: monospace">ReplicationControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>ReplicationControllerConfiguration holds configuration for
+ReplicationController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>ResourceQuotaController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.ResourceQuotaControllerConfiguration">
+<span style="font-family: monospace">ResourceQuotaControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>ResourceQuotaControllerConfiguration holds configuration for
+ResourceQuotaController related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>SAController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.SAControllerConfiguration">
+<span style="font-family: monospace">SAControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>SAControllerConfiguration holds configuration for ServiceAccountController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>ServiceController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.ServiceControllerConfiguration">
+<span style="font-family: monospace">ServiceControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>ServiceControllerConfiguration holds configuration for ServiceController
+related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>TTLAfterFinishedController</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.TTLAfterFinishedControllerConfiguration">
+<span style="font-family: monospace">TTLAfterFinishedControllerConfiguration</span>
+</a>
+</td>
+<td>
+<p>TTLAfterFinishedControllerConfiguration holds configuration for
+TTLAfterFinishedController related features.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.AttachDetachControllerConfiguration">AttachDetachControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>AttachDetachControllerConfiguration contains elements describing AttachDetachController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DisableAttachDetachReconcilerSync</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>Reconciler runs a periodic loop to reconcile the desired state of the with
+the actual state of the world by triggering attach detach operations.
+This flag enables or disables reconcile.  Is false by default, and thus enabled.</p>
+</td>
+</tr>
+<tr>
+<td><code>ReconcilerSyncLoopPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>ReconcilerSyncLoopPeriod is the amount of time the reconciler sync states loop
+wait between successive executions. Is set to 5 sec by default.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningConfiguration">CSRSigningConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningControllerConfiguration">CSRSigningControllerConfiguration</a>)
+</p>
+<p><p>CSRSigningConfiguration holds information about a particular CSR signer</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CertFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>certFile is the filename containing a PEM-encoded
+X509 CA certificate used to issue certificates</p>
+</td>
+</tr>
+<tr>
+<td><code>KeyFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>keyFile is the filename containing a PEM-encoded
+RSA or ECDSA private key used to issue certificates</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningControllerConfiguration">CSRSigningControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>CSRSigningControllerConfiguration contains elements describing CSRSigningController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClusterSigningCertFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>clusterSigningCertFile is the filename containing a PEM-encoded
+X509 CA certificate used to issue cluster-scoped certificates</p>
+</td>
+</tr>
+<tr>
+<td><code>ClusterSigningKeyFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>clusterSigningCertFile is the filename containing a PEM-encoded
+RSA or ECDSA private key used to issue cluster-scoped certificates</p>
+</td>
+</tr>
+<tr>
+<td><code>KubeletServingSignerConfiguration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningConfiguration">
+<span style="font-family: monospace">CSRSigningConfiguration</span>
+</a>
+</td>
+<td>
+<p>kubeletServingSignerConfiguration holds the certificate and key used to issue certificates for the kubernetes.io/kubelet-serving signer</p>
+</td>
+</tr>
+<tr>
+<td><code>KubeletClientSignerConfiguration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningConfiguration">
+<span style="font-family: monospace">CSRSigningConfiguration</span>
+</a>
+</td>
+<td>
+<p>kubeletClientSignerConfiguration holds the certificate and key used to issue certificates for the kubernetes.io/kube-apiserver-client-kubelet</p>
+</td>
+</tr>
+<tr>
+<td><code>KubeAPIServerClientSignerConfiguration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningConfiguration">
+<span style="font-family: monospace">CSRSigningConfiguration</span>
+</a>
+</td>
+<td>
+<p>kubeAPIServerClientSignerConfiguration holds the certificate and key used to issue certificates for the kubernetes.io/kube-apiserver-client</p>
+</td>
+</tr>
+<tr>
+<td><code>LegacyUnknownSignerConfiguration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CSRSigningConfiguration">
+<span style="font-family: monospace">CSRSigningConfiguration</span>
+</a>
+</td>
+<td>
+<p>legacyUnknownSignerConfiguration holds the certificate and key used to issue certificates for the kubernetes.io/legacy-unknown</p>
+</td>
+</tr>
+<tr>
+<td><code>ClusterSigningDuration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>clusterSigningDuration is the length of duration signed certificates
+will be given.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.CloudProviderConfiguration">CloudProviderConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeCloudSharedConfiguration">KubeCloudSharedConfiguration</a>)
+</p>
+<p><p>CloudProviderConfiguration contains basically elements about cloud provider.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Name</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>Name is the provider for cloud services.</p>
+</td>
+</tr>
+<tr>
+<td><code>CloudConfigFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>cloudConfigFile is the path to the cloud provider configuration file.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.DaemonSetControllerConfiguration">DaemonSetControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>DaemonSetControllerConfiguration contains elements describing DaemonSetController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentDaemonSetSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentDaemonSetSyncs is the number of daemonset objects that are
+allowed to sync concurrently. Larger number = more responsive daemonset,
+but more CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.DeploymentControllerConfiguration">DeploymentControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>DeploymentControllerConfiguration contains elements describing DeploymentController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentDeploymentSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentDeploymentSyncs is the number of deployment objects that are
+allowed to sync concurrently. Larger number = more responsive deployments,
+but more CPU (and network) load.</p>
+</td>
+</tr>
+<tr>
+<td><code>DeploymentControllerSyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>deploymentControllerSyncPeriod is the period for syncing the deployments.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.DeprecatedControllerConfiguration">DeprecatedControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>DeprecatedControllerConfiguration contains elements be deprecated.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DeletingPodsQPS</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">float32</span>
+</td>
+<td>
+<p>DEPRECATED: deletingPodsQps is the number of nodes per second on which pods are deleted in
+case of node failure.</p>
+</td>
+</tr>
+<tr>
+<td><code>DeletingPodsBurst</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>DEPRECATED: deletingPodsBurst is the number of nodes on which pods are bursty deleted in
+case of node failure. For more details look into RateLimiter.</p>
+</td>
+</tr>
+<tr>
+<td><code>RegisterRetryCount</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>registerRetryCount is the number of retries for initial node registration.
+Retry interval equals node-sync-period.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.EndpointControllerConfiguration">EndpointControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>EndpointControllerConfiguration contains elements describing EndpointController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentEndpointSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentEndpointSyncs is the number of endpoint syncing operations
+that will be done concurrently. Larger number = faster endpoint updating,
+but more CPU (and network) load.</p>
+</td>
+</tr>
+<tr>
+<td><code>EndpointUpdatesBatchPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>EndpointUpdatesBatchPeriod describes the length of endpoint updates batching period.
+Processing of pod changes will be delayed by this duration to join them with potential
+upcoming updates and reduce the overall number of endpoints updates.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.EndpointSliceControllerConfiguration">EndpointSliceControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>EndpointSliceControllerConfiguration contains elements describing
+EndpointSliceController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentServiceEndpointSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentServiceEndpointSyncs is the number of service endpoint syncing
+operations that will be done concurrently. Larger number = faster
+endpoint slice updating, but more CPU (and network) load.</p>
+</td>
+</tr>
+<tr>
+<td><code>MaxEndpointsPerSlice</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>maxEndpointsPerSlice is the maximum number of endpoints that will be
+added to an EndpointSlice. More endpoints per slice will result in fewer
+and larger endpoint slices, but larger resources.</p>
+</td>
+</tr>
+<tr>
+<td><code>EndpointUpdatesBatchPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>EndpointUpdatesBatchPeriod describes the length of endpoint updates batching period.
+Processing of pod changes will be delayed by this duration to join them with potential
+upcoming updates and reduce the overall number of endpoints updates.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.EndpointSliceMirroringControllerConfiguration">EndpointSliceMirroringControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>EndpointSliceMirroringControllerConfiguration contains elements describing
+EndpointSliceMirroringController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MirroringConcurrentServiceEndpointSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>mirroringConcurrentServiceEndpointSyncs is the number of service endpoint
+syncing operations that will be done concurrently. Larger number = faster
+endpoint slice updating, but more CPU (and network) load.</p>
+</td>
+</tr>
+<tr>
+<td><code>MirroringMaxEndpointsPerSubset</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>mirroringMaxEndpointsPerSubset is the maximum number of endpoints that
+will be mirrored to an EndpointSlice for an EndpointSubset.</p>
+</td>
+</tr>
+<tr>
+<td><code>MirroringEndpointUpdatesBatchPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>mirroringEndpointUpdatesBatchPeriod can be used to batch EndpointSlice
+updates. All updates triggered by EndpointSlice changes will be delayed
+by up to 'mirroringEndpointUpdatesBatchPeriod'. If other addresses in the
+same Endpoints resource change in that period, they will be batched to a
+single EndpointSlice update. Default 0 value means that each Endpoints
+update triggers an EndpointSlice update.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.GarbageCollectorControllerConfiguration">GarbageCollectorControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>GarbageCollectorControllerConfiguration contains elements describing GarbageCollectorController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EnableGarbageCollector</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>enables the generic garbage collector. MUST be synced with the
+corresponding flag of the kube-apiserver. WARNING: the generic garbage
+collector is an alpha feature.</p>
+</td>
+</tr>
+<tr>
+<td><code>ConcurrentGCSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentGCSyncs is the number of garbage collector workers that are
+allowed to sync concurrently.</p>
+</td>
+</tr>
+<tr>
+<td><code>GCIgnoredResources</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.GroupResource">
+<span style="font-family: monospace">[]GroupResource</span>
+</a>
+</td>
+<td>
+<p>gcIgnoredResources is the list of GroupResources that garbage collection should ignore.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.GenericControllerManagerConfiguration">GenericControllerManagerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>GenericControllerManagerConfiguration holds configuration for a generic controller-manager.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Port</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>port is the port that the controller-manager's http service runs on.</p>
+</td>
+</tr>
+<tr>
+<td><code>Address</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>address is the IP address to serve on (set to 0.0.0.0 for all interfaces).</p>
+</td>
+</tr>
+<tr>
+<td><code>MinResyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>minResyncPeriod is the resync period in reflectors; will be random between
+minResyncPeriod and 2*minResyncPeriod.</p>
+</td>
+</tr>
+<tr>
+<td><code>ClientConnection</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#/v1alpha1.ClientConnectionConfiguration">
+<span style="font-family: monospace">ClientConnectionConfiguration</span>
+</a>
+</td>
+<td>
+<p>ClientConnection specifies the kubeconfig file and client connection
+settings for the proxy server to use when communicating with the apiserver.</p>
+</td>
+</tr>
+<tr>
+<td><code>ControllerStartInterval</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>How long to wait between starting controller managers</p>
+</td>
+</tr>
+<tr>
+<td><code>LeaderElection</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#/v1alpha1.LeaderElectionConfiguration">
+<span style="font-family: monospace">LeaderElectionConfiguration</span>
+</a>
+</td>
+<td>
+<p>leaderElection defines the configuration of leader election client.</p>
+</td>
+</tr>
+<tr>
+<td><code>Controllers</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">[]string</span>
+</td>
+<td>
+<p>Controllers is the list of controllers to enable or disable
+'*' means &quot;all enabled by default controllers&quot;
+'foo' means &quot;enable 'foo'&quot;
+'-foo' means &quot;disable 'foo'&quot;
+first item for a particular name wins</p>
+</td>
+</tr>
+<tr>
+<td><code>Debugging</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#/v1alpha1.DebuggingConfiguration">
+<span style="font-family: monospace">DebuggingConfiguration</span>
+</a>
+</td>
+<td>
+<p>DebuggingConfiguration holds configuration for Debugging related features.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.GroupResource">GroupResource
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.GarbageCollectorControllerConfiguration">GarbageCollectorControllerConfiguration</a>)
+</p>
+<p><p>GroupResource describes an group resource.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Group</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>group is the group portion of the GroupResource.</p>
+</td>
+</tr>
+<tr>
+<td><code>Resource</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>resource is the resource portion of the GroupResource.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.HPAControllerConfiguration">HPAControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>HPAControllerConfiguration contains elements describing HPAController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HorizontalPodAutoscalerSyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>HorizontalPodAutoscalerSyncPeriod is the period for syncing the number of
+pods in horizontal pod autoscaler.</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerUpscaleForbiddenWindow</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>HorizontalPodAutoscalerUpscaleForbiddenWindow is a period after which next upscale allowed.</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerDownscaleStabilizationWindow</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>HorizontalPodAutoscalerDowncaleStabilizationWindow is a period for which autoscaler will look
+backwards and not scale down below any recommendation it made during that period.</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerDownscaleForbiddenWindow</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>HorizontalPodAutoscalerDownscaleForbiddenWindow is a period after which next downscale allowed.</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerTolerance</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">float64</span>
+</td>
+<td>
+<p>HorizontalPodAutoscalerTolerance is the tolerance for when
+resource usage suggests upscaling/downscaling</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerUseRESTClients</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>HorizontalPodAutoscalerUseRESTClients causes the HPA controller to use REST clients
+through the kube-aggregator when enabled, instead of using the legacy metrics client
+through the API server proxy.</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerCPUInitializationPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>HorizontalPodAutoscalerCPUInitializationPeriod is the period after pod start when CPU samples
+might be skipped.</p>
+</td>
+</tr>
+<tr>
+<td><code>HorizontalPodAutoscalerInitialReadinessDelay</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>HorizontalPodAutoscalerInitialReadinessDelay is period after pod start during which readiness
+changes are treated as readiness being set for the first time. The only effect of this is that
+HPA will disregard CPU samples from unready pods that had last readiness change during that
+period.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.JobControllerConfiguration">JobControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>JobControllerConfiguration contains elements describing JobController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentJobSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentJobSyncs is the number of job objects that are
+allowed to sync concurrently. Larger number = more responsive jobs,
+but more CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.KubeCloudSharedConfiguration">KubeCloudSharedConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>KubeCloudSharedConfiguration contains elements shared by both kube-controller manager
+and cloud-controller manager, but not genericconfig.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CloudProvider</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.CloudProviderConfiguration">
+<span style="font-family: monospace">CloudProviderConfiguration</span>
+</a>
+</td>
+<td>
+<p>CloudProviderConfiguration holds configuration for CloudProvider related features.</p>
+</td>
+</tr>
+<tr>
+<td><code>ExternalCloudVolumePlugin</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>externalCloudVolumePlugin specifies the plugin to use when cloudProvider is &quot;external&quot;.
+It is currently used by the in repo cloud providers to handle node and volume control in the KCM.</p>
+</td>
+</tr>
+<tr>
+<td><code>UseServiceAccountCredentials</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>useServiceAccountCredentials indicates whether controllers should be run with
+individual service account credentials.</p>
+</td>
+</tr>
+<tr>
+<td><code>AllowUntaggedCloud</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>run with untagged cloud instances</p>
+</td>
+</tr>
+<tr>
+<td><code>RouteReconciliationPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>routeReconciliationPeriod is the period for reconciling routes created for Nodes by cloud provider..</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeMonitorPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>nodeMonitorPeriod is the period for syncing NodeStatus in NodeController.</p>
+</td>
+</tr>
+<tr>
+<td><code>ClusterName</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>clusterName is the instance prefix for the cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>ClusterCIDR</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>clusterCIDR is CIDR Range for Pods in cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>AllocateNodeCIDRs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>AllocateNodeCIDRs enables CIDRs for Pods to be allocated and, if
+ConfigureCloudRoutes is true, to be set on the cloud provider.</p>
+</td>
+</tr>
+<tr>
+<td><code>CIDRAllocatorType</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>CIDRAllocatorType determines what kind of pod CIDR allocator will be used.</p>
+</td>
+</tr>
+<tr>
+<td><code>ConfigureCloudRoutes</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>configureCloudRoutes enables CIDRs allocated with allocateNodeCIDRs
+to be configured on the cloud provider.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeSyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>nodeSyncPeriod is the period for syncing nodes from cloudprovider. Longer
+periods will result in fewer calls to cloud provider, but may delay addition
+of new nodes to cluster.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.NamespaceControllerConfiguration">NamespaceControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>NamespaceControllerConfiguration contains elements describing NamespaceController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NamespaceSyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>namespaceSyncPeriod is the period for syncing namespace life-cycle
+updates.</p>
+</td>
+</tr>
+<tr>
+<td><code>ConcurrentNamespaceSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentNamespaceSyncs is the number of namespace objects that are
+allowed to sync concurrently.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.NodeIPAMControllerConfiguration">NodeIPAMControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>NodeIPAMControllerConfiguration contains elements describing NodeIpamController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ServiceCIDR</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>serviceCIDR is CIDR Range for Services in cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>SecondaryServiceCIDR</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>secondaryServiceCIDR is CIDR Range for Services in cluster. This is used in dual stack clusters. SecondaryServiceCIDR must be of different IP family than ServiceCIDR</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeCIDRMaskSize</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>NodeCIDRMaskSize is the mask size for node cidr in cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeCIDRMaskSizeIPv4</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>NodeCIDRMaskSizeIPv4 is the mask size for node cidr in dual-stack cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeCIDRMaskSizeIPv6</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>NodeCIDRMaskSizeIPv6 is the mask size for node cidr in dual-stack cluster.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.NodeLifecycleControllerConfiguration">NodeLifecycleControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>NodeLifecycleControllerConfiguration contains elements describing NodeLifecycleController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EnableTaintManager</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>If set to true enables NoExecute Taints and will evict all not-tolerating
+Pod running on Nodes tainted with this kind of Taints.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeEvictionRate</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">float32</span>
+</td>
+<td>
+<p>nodeEvictionRate is the number of nodes per second on which pods are deleted in case of node failure when a zone is healthy</p>
+</td>
+</tr>
+<tr>
+<td><code>SecondaryNodeEvictionRate</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">float32</span>
+</td>
+<td>
+<p>secondaryNodeEvictionRate is the number of nodes per second on which pods are deleted in case of node failure when a zone is unhealthy</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeStartupGracePeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>nodeStartupGracePeriod is the amount of time which we allow starting a node to
+be unresponsive before marking it unhealthy.</p>
+</td>
+</tr>
+<tr>
+<td><code>NodeMonitorGracePeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>nodeMontiorGracePeriod is the amount of time which we allow a running node to be
+unresponsive before marking it unhealthy. Must be N times more than kubelet's
+nodeStatusUpdateFrequency, where N means number of retries allowed for kubelet
+to post node status.</p>
+</td>
+</tr>
+<tr>
+<td><code>PodEvictionTimeout</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>podEvictionTimeout is the grace period for deleting pods on failed nodes.</p>
+</td>
+</tr>
+<tr>
+<td><code>LargeClusterSizeThreshold</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>secondaryNodeEvictionRate is implicitly overridden to 0 for clusters smaller than or equal to largeClusterSizeThreshold</p>
+</td>
+</tr>
+<tr>
+<td><code>UnhealthyZoneThreshold</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">float32</span>
+</td>
+<td>
+<p>Zone is treated as unhealthy in nodeEvictionRate and secondaryNodeEvictionRate when at least
+unhealthyZoneThreshold (no less than 3) of Nodes in the zone are NotReady</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.PersistentVolumeBinderControllerConfiguration">PersistentVolumeBinderControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>PersistentVolumeBinderControllerConfiguration contains elements describing
+PersistentVolumeBinderController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PVClaimBinderSyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>pvClaimBinderSyncPeriod is the period for syncing persistent volumes
+and persistent volume claims.</p>
+</td>
+</tr>
+<tr>
+<td><code>VolumeConfiguration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.VolumeConfiguration">
+<span style="font-family: monospace">VolumeConfiguration</span>
+</a>
+</td>
+<td>
+<p>volumeConfiguration holds configuration for volume related features.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.PersistentVolumeRecyclerConfiguration">PersistentVolumeRecyclerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.VolumeConfiguration">VolumeConfiguration</a>)
+</p>
+<p><p>PersistentVolumeRecyclerConfiguration contains elements describing persistent volume plugins.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MaximumRetry</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>maximumRetry is number of retries the PV recycler will execute on failure to recycle
+PV.</p>
+</td>
+</tr>
+<tr>
+<td><code>MinimumTimeoutNFS</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>minimumTimeoutNFS is the minimum ActiveDeadlineSeconds to use for an NFS Recycler
+pod.</p>
+</td>
+</tr>
+<tr>
+<td><code>PodTemplateFilePathNFS</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>podTemplateFilePathNFS is the file path to a pod definition used as a template for
+NFS persistent volume recycling</p>
+</td>
+</tr>
+<tr>
+<td><code>IncrementTimeoutNFS</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>incrementTimeoutNFS is the increment of time added per Gi to ActiveDeadlineSeconds
+for an NFS scrubber pod.</p>
+</td>
+</tr>
+<tr>
+<td><code>PodTemplateFilePathHostPath</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>podTemplateFilePathHostPath is the file path to a pod definition used as a template for
+HostPath persistent volume recycling. This is for development and testing only and
+will not work in a multi-node cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>MinimumTimeoutHostPath</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>minimumTimeoutHostPath is the minimum ActiveDeadlineSeconds to use for a HostPath
+Recycler pod.  This is for development and testing only and will not work in a multi-node
+cluster.</p>
+</td>
+</tr>
+<tr>
+<td><code>IncrementTimeoutHostPath</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>incrementTimeoutHostPath is the increment of time added per Gi to ActiveDeadlineSeconds
+for a HostPath scrubber pod.  This is for development and testing only and will not work
+in a multi-node cluster.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.PodGCControllerConfiguration">PodGCControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>PodGCControllerConfiguration contains elements describing PodGCController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TerminatedPodGCThreshold</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>terminatedPodGCThreshold is the number of terminated pods that can exist
+before the terminated pod garbage collector starts deleting terminated pods.
+If &lt;= 0, the terminated pod garbage collector is disabled.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.ReplicaSetControllerConfiguration">ReplicaSetControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>ReplicaSetControllerConfiguration contains elements describing ReplicaSetController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentRSSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentRSSyncs is the number of replica sets that are  allowed to sync
+concurrently. Larger number = more responsive replica  management, but more
+CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.ReplicationControllerConfiguration">ReplicationControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>ReplicationControllerConfiguration contains elements describing ReplicationController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentRCSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentRCSyncs is the number of replication controllers that are
+allowed to sync concurrently. Larger number = more responsive replica
+management, but more CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.ResourceQuotaControllerConfiguration">ResourceQuotaControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>ResourceQuotaControllerConfiguration contains elements describing ResourceQuotaController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ResourceQuotaSyncPeriod</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#Duration">
+<span style="font-family: monospace">meta/v1.Duration</span>
+</a>
+</td>
+<td>
+<p>resourceQuotaSyncPeriod is the period for syncing quota usage status
+in the system.</p>
+</td>
+</tr>
+<tr>
+<td><code>ConcurrentResourceQuotaSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentResourceQuotaSyncs is the number of resource quotas that are
+allowed to sync concurrently. Larger number = more responsive quota
+management, but more CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.SAControllerConfiguration">SAControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>SAControllerConfiguration contains elements describing ServiceAccountController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ServiceAccountKeyFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>serviceAccountKeyFile is the filename containing a PEM-encoded private RSA key
+used to sign service account tokens.</p>
+</td>
+</tr>
+<tr>
+<td><code>ConcurrentSATokenSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentSATokenSyncs is the number of service account token syncing operations
+that will be done concurrently.</p>
+</td>
+</tr>
+<tr>
+<td><code>RootCAFile</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>rootCAFile is the root certificate authority will be included in service
+account's token secret. This must be a valid PEM-encoded CA bundle.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.ServiceControllerConfiguration">ServiceControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>ServiceControllerConfiguration contains elements describing ServiceController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentServiceSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentServiceSyncs is the number of services that are
+allowed to sync concurrently. Larger number = more responsive service
+management, but more CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.StatefulSetControllerConfiguration">StatefulSetControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>StatefulSetControllerConfiguration contains elements describing StatefulSetController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentStatefulSetSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentStatefulSetSyncs is the number of statefulset objects that are
+allowed to sync concurrently. Larger number = more responsive statefulsets,
+but more CPU (and network) load.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.TTLAfterFinishedControllerConfiguration">TTLAfterFinishedControllerConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.KubeControllerManagerConfiguration">KubeControllerManagerConfiguration</a>)
+</p>
+<p><p>TTLAfterFinishedControllerConfiguration contains elements describing TTLAfterFinishedController.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConcurrentTTLSyncs</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>concurrentTTLSyncs is the number of TTL-after-finished collector workers that are
+allowed to sync concurrently.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="kubecontrollermanager.config.k8s.io/v1alpha1.VolumeConfiguration">VolumeConfiguration
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.PersistentVolumeBinderControllerConfiguration">PersistentVolumeBinderControllerConfiguration</a>)
+</p>
+<p><p>VolumeConfiguration contains <em>all</em> enumerated flags meant to configure all volume
+plugins. From this config, the controller-manager binary will create many instances of
+volume.VolumeConfig, each containing only the configuration needed for that plugin which
+are then passed to the appropriate plugin. The ControllerManager binary is the only part
+of the code which knows what plugins are supported and which flags correspond to each plugin.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EnableHostPathProvisioning</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>enableHostPathProvisioning enables HostPath PV provisioning when running without a
+cloud provider. This allows testing and development of provisioning features. HostPath
+provisioning is not supported in any way, won't work in a multi-node cluster, and
+should not be used for anything other than testing or development.</p>
+</td>
+</tr>
+<tr>
+<td><code>EnableDynamicProvisioning</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>enableDynamicProvisioning enables the provisioning of volumes when running within an environment
+that supports dynamic provisioning. Defaults to true.</p>
+</td>
+</tr>
+<tr>
+<td><code>PersistentVolumeRecyclerConfiguration</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#kubecontrollermanager.config.k8s.io/v1alpha1.PersistentVolumeRecyclerConfiguration">
+<span style="font-family: monospace">PersistentVolumeRecyclerConfiguration</span>
+</a>
+</td>
+<td>
+<p>persistentVolumeRecyclerConfiguration holds configuration for persistent volume plugins.</p>
+</td>
+</tr>
+<tr>
+<td><code>FlexVolumePluginDir</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>volumePluginDir is the full path of the directory in which the flex
+volume plugin should search for additional third party volume plugins</p>
+</td>
+</tr>
+</tbody>
+</table>
+<HR />
+</div>
+<div class="container">
+<p><em>Generated with <code>gendoc</code> on git commit <code>7231496</code></em></p>
+</div>
+</body>
+</html>

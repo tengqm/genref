@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style type="text/css">
+td p {
+margin-bottom: 0
+}
+code {
+color: #802060;
+display: inline-block;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<H2 id="client.authentication.k8s.io/v1alpha1">Package: <span style="font-family: monospace">client.authentication.k8s.io/v1alpha1</span></H2>
+<p></p>
+<H3>Resource Types:</H3>
+<ul><li>
+<a href="#client.authentication.k8s.io/v1alpha1.ExecCredential">ExecCredential</a>
+</li></ul>
+<H3 id="client.authentication.k8s.io/v1alpha1.ExecCredential">ExecCredential
+</H3>
+<p><p>ExecCredential is used by exec-based plugins to communicate credentials to
+HTTP transports.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code></br>string</td>
+<td><code>client.authentication.k8s.io/v1alpha1</code></td>
+</tr>
+<tr>
+<td><code>kind</code></br>string</td>
+<td><code>ExecCredential</code></td>
+</tr>
+<tr>
+<td><code>spec</code>
+<span style="color:blue;"> *</span>
+</br>
+<a href="#client.authentication.k8s.io/v1alpha1.ExecCredentialSpec">
+<span style="font-family: monospace">ExecCredentialSpec</span>
+</a>
+</td>
+<td>
+<p>Spec holds information passed to the plugin by the transport. This contains
+request and runtime specific information, such as if the session is interactive.</p>
+<br/>
+<br/>
+<table>
+<tr>
+<td><code>response</code>
+</br>
+<a href="#client.authentication.k8s.io/v1alpha1.Response">
+<span style="font-family: monospace">Response</span>
+</a>
+</td>
+<td>
+<p>Response is populated when the transport encounters HTTP status codes, such as 401,
+suggesting previous credentials were invalid.</p>
+</td>
+</tr>
+<tr>
+<td><code>interactive</code>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>Interactive is true when the transport detects the command is being called from an
+interactive prompt.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><code>status</code>
+</br>
+<a href="#client.authentication.k8s.io/v1alpha1.ExecCredentialStatus">
+<span style="font-family: monospace">ExecCredentialStatus</span>
+</a>
+</td>
+<td>
+<p>Status is filled in by the plugin and holds the credentials that the transport
+should use to contact the API.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="client.authentication.k8s.io/v1alpha1.ExecCredentialSpec">ExecCredentialSpec
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#client.authentication.k8s.io/v1alpha1.ExecCredential">ExecCredential</a>)
+</p>
+<p><p>ExecCredenitalSpec holds request and runtime specific information provided by
+the transport.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>response</code>
+</br>
+<a href="#client.authentication.k8s.io/v1alpha1.Response">
+<span style="font-family: monospace">Response</span>
+</a>
+</td>
+<td>
+<p>Response is populated when the transport encounters HTTP status codes, such as 401,
+suggesting previous credentials were invalid.</p>
+</td>
+</tr>
+<tr>
+<td><code>interactive</code>
+</br>
+<span style="font-family: monospace">bool</span>
+</td>
+<td>
+<p>Interactive is true when the transport detects the command is being called from an
+interactive prompt.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="client.authentication.k8s.io/v1alpha1.ExecCredentialStatus">ExecCredentialStatus
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#client.authentication.k8s.io/v1alpha1.ExecCredential">ExecCredential</a>)
+</p>
+<p><p>ExecCredentialStatus holds credentials for the transport to use.</p>
+<p>Token and ClientKeyData are sensitive fields. This data should only be
+transmitted in-memory between client and exec plugin process. Exec plugin
+itself should at least be protected via file permissions.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expirationTimestamp</code>
+</br>
+<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#time-v1-meta">
+<span style="font-family: monospace">meta/v1.Time</span>
+</a>
+</td>
+<td>
+<p>ExpirationTimestamp indicates a time when the provided credentials expire.</p>
+</td>
+</tr>
+<tr>
+<td><code>token</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>Token is a bearer token used by the client for request authentication.</p>
+</td>
+</tr>
+<tr>
+<td><code>clientCertificateData</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>PEM-encoded client TLS certificates (including intermediates, if any).</p>
+</td>
+</tr>
+<tr>
+<td><code>clientKeyData</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">string</span>
+</td>
+<td>
+<p>PEM-encoded private key for the above certificate.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<H3 id="client.authentication.k8s.io/v1alpha1.Response">Response
+</H3>
+<p>
+(<em>Appears in:</em>
+<a href="#client.authentication.k8s.io/v1alpha1.ExecCredentialSpec">ExecCredentialSpec</a>)
+</p>
+<p><p>Response defines metadata about a failed request, including HTTP status code and
+response headers.</p>
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>header</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">map[string][]string</span>
+</td>
+<td>
+<p>Header holds HTTP headers returned by the server.</p>
+</td>
+</tr>
+<tr>
+<td><code>code</code>
+<span style="color:blue;"> *</span>
+</br>
+<span style="font-family: monospace">int32</span>
+</td>
+<td>
+<p>Code is the HTTP status code returned by the server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<HR />
+</div>
+<div class="container">
+<p><em>Generated with <code>gendoc</code> on git commit <code>7231496</code></em></p>
+</div>
+</body>
+</html>
