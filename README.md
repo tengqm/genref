@@ -22,7 +22,7 @@ existing docs, which can be the GoDocs if no better option exists.
    ./genref -include kubelet-config --output samples
    ```
 
-4. Visit `kube-scheduler.v1beta1.html` to view the results.
+4. Visit `kubelet-config.v1beta1.html` to view the results.
 
 ## Credit
 
