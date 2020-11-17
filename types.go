@@ -43,7 +43,9 @@ func (p *apiPackage) GroupName() string {
 
 // Anchor generates a valid anchor ID for an API package based on its name.
 func (p *apiPackage) Anchor() string {
-	return strings.Replace(p.DisplayName(), " ", "", -1)
+	s := strings.Replace(p.DisplayName(), " ", "", -1)
+	s = strings.Replace(s, "/", "-", -1)
+	return strings.Replace(s, ".", "-", -1)
 }
 
 // VisibleTypes enumerates all visible types contained in a package.
@@ -199,7 +201,15 @@ func (t *apiType) APIGroup() string {
 
 // Anchor returns the #anchor string for the local type
 func (t *apiType) Anchor() string {
-	return fmt.Sprintf("%s.%s", t.APIGroup(), t.Name.Name)
+	var s string
+	group := t.APIGroup()
+	if group[0] == '/' {
+		s = fmt.Sprintf("%s", t.Name.Name)
+	} else {
+		s = fmt.Sprintf("%s.%s", group, t.Name.Name)
+	}
+	s = strings.Replace(s, "/", "-", -1)
+	return strings.Replace(s, ".", "-", -1)
 }
 
 // Link returns an anchor to the type if it can be generated. returns

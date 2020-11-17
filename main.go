@@ -13,6 +13,7 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	texttemplate "text/template"
 
 	"github.com/pkg/errors"
 	"k8s.io/gengo/parser"
@@ -22,12 +23,12 @@ import (
 )
 
 var (
-	flConfig      = flag.String("config", "config.yaml", "path to config file")
-	flTemplateDir = flag.String("template-dir", "template", "path to template/ dir")
-	flInclude     = flag.String("include", "", "API definitions to include, comma-separated list")
-	flExclude     = flag.String("exclude", "", "API definitions to exclude, comma-separated list")
-	flPath        = flag.String("output", ".", "path for the output files")
-	flVerbose     = flag.Bool("verbose", false, "turn on verbose output")
+	flConfig  = flag.String("config", "config.yaml", "path to config file")
+	flFormat  = flag.String("format", "html", "format for output")
+	flInclude = flag.String("include", "", "API definitions to include, comma-separated list")
+	flExclude = flag.String("exclude", "", "API definitions to exclude, comma-separated list")
+	flPath    = flag.String("output", ".", "path for the output files")
+	flVerbose = flag.Bool("verbose", false, "turn on verbose output")
 )
 
 const (
@@ -102,10 +103,16 @@ func init() {
 	if *flConfig == "" {
 		panic("-config not specified")
 	}
+	var path string
+	var err error
+	if *flFormat == "html" || *flFormat == "markdown" {
+		path, err = filepath.Abs(*flFormat)
+	} else {
+		panic(errors.Errorf("unsupported format '%s' specified", *flFormat))
+	}
 
-	path, err := filepath.Abs(*flTemplateDir)
 	if err != nil {
-		panic(errors.Wrapf(err, "template directory '%s' is not found ", path))
+		panic(errors.Wrapf(err, "template directory '%s' is not found", path))
 	}
 	fi, err := os.Stat(path)
 	if err != nil {
@@ -242,18 +249,33 @@ func combineAPIPackages(pkgs []*types.Package) ([]*apiPackage, error) {
 
 // render is the render procedure for templating.
 func render(w io.Writer, pkgs []*apiPackage) error {
-	glob := filepath.Join(*flTemplateDir, "*.tpl")
-	t, err := template.New("").ParseGlob(glob)
-	if err != nil {
-		return errors.Wrap(err, "parse error")
-	}
+	var err error
 
 	gitCommit, _ := exec.Command("git", "rev-parse", "--short", "HEAD").Output()
-	return errors.Wrap(t.ExecuteTemplate(w, "packages", map[string]interface{}{
+	params := map[string]interface{}{
 		"packages":  pkgs,
 		"config":    config,
 		"gitCommit": strings.TrimSpace(string(gitCommit)),
-	}), "template execution error")
+	}
+
+	glob := filepath.Join(*flFormat, "*.tpl")
+	if *flFormat == "html" {
+		tmpl, err := template.New("").ParseGlob(glob)
+		if err != nil {
+			return errors.Wrap(err, "parse error")
+		}
+
+		err = tmpl.ExecuteTemplate(w, "packages", params)
+	} else {
+		tmpl, err := texttemplate.New("").ParseGlob(glob)
+		if err != nil {
+			return errors.Wrap(err, "parse error")
+		}
+
+		err = tmpl.ExecuteTemplate(w, "packages", params)
+	}
+
+	return errors.Wrap(err, "template execution error")
 }
 
 // writeFile creates the output file at the specified output path.
@@ -266,7 +288,8 @@ func writeFile(pkgs []*apiPackage, outputPath string) error {
 	if err := render(&b, pkgs); err != nil {
 		return errors.Wrap(err, "failed to render the result")
 	}
-	s := regexp.MustCompile(`(?m)^\s+`).ReplaceAllString(b.String(), "")
+	// s := regexp.MustCompile(`(?m)^\s+`).ReplaceAllString(b.String(), "")
+	s := b.String()
 
 	if err := ioutil.WriteFile(outputPath, []byte(s), 0644); err != nil {
 		return errors.Errorf("failed to write to out file: %v", err)
@@ -319,7 +342,12 @@ func main() {
 
 		segments := strings.Split(item.Path, "/")
 		version := segments[len(segments)-1]
-		fn := fmt.Sprintf("%s/%s.%s.html", *flPath, item.Name, version)
+		fn := fmt.Sprintf("%s/%s.%s", *flPath, item.Name, version)
+		if *flFormat == "html" {
+			fn = fn + ".html"
+		} else if *flFormat == "markdown" {
+			fn = fn + ".md"
+		}
 		if err = writeFile(pkgs, fn); err != nil {
 			perror("%+v", err)
 			continue
